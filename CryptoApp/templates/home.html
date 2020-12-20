@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% set active_page = "home" %}
+{% block title %}Home{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ url_for("static", filename="css/home.css") }}">
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-lg-11">
+        <!-- Title -->
+        <h1 class="mt-4">Different types of security attacks</h1>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="{{ url_for("static", filename="media/Diagram_attacks.png") }}" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">
+          Diagram showing the different types of attacks, along with its classification
+        </p>
+        <p>
+          Attacks can be classified as passive attacks or active attacks. A passive attack does not involve any modifications to the contents of an original message.
+          It can be an interception of a message, which affects the message confidentiality. An active attack involves modification to the contents of the original message and can affect availability, integrity and authenticity.
+          Now we will dive deeper, and learn about the sub-categories of passive attacks and active attacks as well as further elaborating on the 2 different types of attacks.
+        </p>
+        <p>
+          <span class="h5">A passive attack typically involves eavesdropping or monitoring of data transmission. For instance, an attacker compromises data confidentiality. By performing unauthorized sniffing of data in a communication channel.</span>
+          <img class="img-fluid rounded" src="{{ url_for("static", filename="media/wireshark.png") }}" alt="">
+           <p class="lead">
+            Wireshark, a free and popular program used to capture network traffic.
+          </p>
+          <ul>
+            There are 2 sub-categories of passive attacks
+            <li>
+              Release of message contents attack
+              <ul class="ul-sec">
+                <li>
+                  The recipient of a message can be an attacker
+                </li>
+                <li>
+                  He sends the message to someone against the sender’s wishHe sends the message to someone against the sender’s wish
+                </li>
+                <li>
+                  e.g. in a Facebook post
+                </li>
+              </ul>
+            </li>
+            <li>
+              Traffic analysis attack
+              <ul class="ul-sec">
+                <li>
+                  The attacker sniff the network; and
+                </li>
+                <li>
+                  Attempt to analyse the encoded messages to make sense out of them,
+                </li>
+                <li>
+                  e.g. by using a protocol analyser
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          <span class="h5">In contrast to a passive attack, an active attack involves modification to the contents of the original message</span>
+          <ul>
+            There are 3 sub-categories of active attacks
+            <li>
+              Interruption attack affects the availability of information/system
+              <ul class="ul-sec">
+              </ul>
+            </li>
+            <li>
+              Modification attack affects the integrity of a message
+              <ul class="ul-sec">
+                <li>
+                  Replay attacks - capture and resent
+                  <ul class="list-unstyled">
+                    <li>
+                      In a replay attack, the attacker captures and resend a message. For example, an attacker can gain access to a resource. By resending authentication information to confuse the destination host.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Alteration - change original message
+                  <ul class="list-unstyled">
+                    <li>
+                      In alteration attack, the attacker captures and modifies the content of the original message.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Fabrication attack affects the authenticity of the communication
+            </li>
+            <br>
+            Modification attacks can in turn be divided into replay attacks and alterations.
+          </ul>
+        </p>
+        <p class="h5">
+          The following video explains DDOS attacks, a type of interruption attack
+        </p>
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ilhGh9CEIwM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+        <p class="h5">
+          Here's a quiz to test you on what you have learnt
+        </p>
+        <p>
+          <a data-quiz="Q1PT0C7F" data-type=4 href="https://www.quiz-maker.com/Q1PT0C7F">Loading...</a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//cdn.poll-maker.com/quiz-embed-v1.js','qp');</script>
+        </p>
+        <hr>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
